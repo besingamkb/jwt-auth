@@ -9,6 +9,8 @@ sudo chmod -R 777 bootstrap/cache storage/
 composer dump-autoload -o & php artisan view:clear & php artisan cache:clear 
 
 php artisan migrate --seed
+
+php artisan jwt:secret
 ```
 Please note to remove `'authenticate'` on `Middleware\VerifyCsrfToken.php` if you decide to use this on production 
 
